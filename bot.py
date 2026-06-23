@@ -7,7 +7,10 @@ CHAT_ID = os.getenv("CHAT_ID")
 
 URL = "https://aktu.ac.in/circulars.html"
 
-r = requests.get(URL)
+r = requests.get(URL, timeout=30)
+if r.status_code != 200:
+    print("Website not reachable")
+    exit()
 soup = BeautifulSoup(r.text, "html.parser")
 
 links = soup.find_all("a")

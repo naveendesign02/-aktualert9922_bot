@@ -7,7 +7,7 @@ CHAT_ID = os.getenv("CHAT_ID")
 
 URL = "https://aktu.ac.in"
 
-r = requests.get(URL, timeout=120)
+r = requests.get(URL, timeout=30)
 if r.status_code != 200:
     print("Website not reachable")
     exit()

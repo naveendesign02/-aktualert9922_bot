@@ -5,7 +5,7 @@ import os
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 CHAT_ID = os.getenv("CHAT_ID")
 
-URL = "https://aktu.ac.in/circulars.html"
+URL = "https://aktu.ac.in"
 
 r = requests.get(URL, timeout=30)
 if r.status_code != 200:

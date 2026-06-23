@@ -2,6 +2,8 @@ name: AKTU Alert
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '0 * * * *'
 
 jobs:
   test:
